@@ -11,6 +11,9 @@ export default function WeatherDisplay() {
       <h1 id="city">London</h1>
       <p class="todayDate">15 October, 23:00</p>
       <WeatherDetails />
+      <p>
+        Coded by <a href="https://github.com/biancafrancini">Bianca Francini</a>{" "}
+      </p>
     </div>
   );
 }
