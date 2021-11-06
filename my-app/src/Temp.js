@@ -11,13 +11,14 @@ export default function WeatherDisplay() {
           <img
             src="https://openweathermap.org/img/wn/10d@2x.png"
             id="IconEmoji"
+            alt="weather_image"
           />
           <strong id="degrees">16</strong>
           <span class="celsius-Fahrenheit">
-            <a href="" class="celsius">
+            <a href="#" class="celsius">
               °C{" "}
             </a>
-            <a href="" class="fahrenheit">
+            <a href="#" class="fahrenheit">
               {" "}
               °F
             </a>
