@@ -15,10 +15,10 @@ export default function WeatherDisplay() {
           />
           <strong id="degrees">16</strong>
           <span class="celsius-Fahrenheit">
-            <a href="#" class="celsius">
+            <a href="#top" class="celsius">
               °C{" "}
             </a>
-            <a href="#" class="fahrenheit">
+            <a href="#top" class="fahrenheit">
               {" "}
               °F
             </a>
