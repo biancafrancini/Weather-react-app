@@ -7,7 +7,7 @@ export default function Form() {
     <div>
       <form class="row g-2" id="search-form">
         <div class="col-auto">
-          <p id="searchCityButton">Search</p>
+          <button id="searchCityButton">Search</button>
         </div>
         <div class="col-auto">
           <label for="inputPassword2" class="visually-hidden">
