@@ -3,11 +3,12 @@ import axios from "axios";
 
 import "./styles.css";
 
-export default function WeatherDisplay() {
+export default function WeatherDisplay(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   function handleResponse(response) {
     console.log(response.data);
     setWeatherData({
+      ready: true,
       description: response.data.weather[0].description,
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
@@ -15,7 +16,6 @@ export default function WeatherDisplay() {
       city: response.data.name,
       iconUrl: "https://openweathermap.org/img/wn/10d@2x.png",
     });
-    setReady(true);
   }
 
   if (weatherData.ready) {
@@ -82,6 +82,8 @@ export default function WeatherDisplay() {
             </div>
           </div>
         </div>
+        <br />
+        <br />
         <p>
           Coded by{" "}
           <a href="https://github.com/biancafrancini">Bianca Francini</a>{" "}
@@ -91,7 +93,7 @@ export default function WeatherDisplay() {
   } else {
     const apiKey = "15311e86ae668422281f7a4353f9243b";
     let city = "Paris";
-    let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
 
     return "Loading...";
