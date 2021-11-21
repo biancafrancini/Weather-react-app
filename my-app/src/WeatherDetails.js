@@ -1,5 +1,7 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
+import WeatherIcon from "./WeatherIcon";
+import WeatherTemperature from "./WeatherTemperature";
 
 export default function WeatherDetails(props) {
   return (
@@ -9,32 +11,25 @@ export default function WeatherDetails(props) {
         <FormattedDate date={props.details.date} />
       </p>
       <div className="container">
-        <div className="row row-cols-2  row-weatherDetails">
+        <div className="row row-cols-2 row-weatherDetails">
           <div className="col weather-description">
             {props.details.description}
           </div>
         </div>
         <div className="row">
-          <div class="col temperature">
-            <img
-              src={props.details.iconUrl}
-              id="IconEmoji"
-              alt={props.details.description}
-            />
-            <strong id="degrees">
-              {Math.round(props.details.temperature)}
-            </strong>
-            <span class="celsius-Fahrenheit">
-              <a href="#top" class="celsius">
-                °C{" "}
-              </a>
-              <a href="#top" class="fahrenheit">
-                {" "}
-                °F
-              </a>
-            </span>
+          <div className="col">
+            <div className="clearfix">
+              <div className="float-left">
+                <WeatherIcon code={props.details.icon} />
+              </div>
+
+              <div className="float-left">
+                <WeatherTemperature celsius={props.details.temperature} />
+              </div>
+            </div>
           </div>
-          <div class="col humidity">
+
+          <div class="col-9 humidity">
             Humidity:{" "}
             <span class="humidityLevel">
               {Math.round(props.details.humidity)}
