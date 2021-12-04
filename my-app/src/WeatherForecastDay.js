@@ -29,7 +29,7 @@ console.log(props.data);
             <WeatherIcon code={props.data.weather[0].icon} />
             <br />
             <div className="WeatherForecast-temperature">
-              <span className="WeatherForecast-temp-max">{maxTemperature()}</span>
+              <span className="WeatherForecast-temp-max">{maxTemperature()}  </span>
               <span className="WeatherForecast-temp-min">{minTemperature()}</span>
             </div>
             </div>

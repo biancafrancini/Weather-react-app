@@ -61,10 +61,9 @@ export default function WeatherDisplay(props) {
           <WeatherForecast coordinates={weatherData.coordinates} />
         </div>
         <br />
-        <br />
-        <p>
+        <p className="code-creator">
           Coded by{" "}
-          <a href="https://github.com/biancafrancini">Bianca Francini</a>{" "}
+          <a href="https://github.com/biancafrancini" rel="noreferrer" target="_blank">Bianca Francini</a>{" "}
         </p>
       </div>
     );

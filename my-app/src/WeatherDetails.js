@@ -16,16 +16,13 @@ export default function WeatherDetails(props) {
             {props.details.description}
           </div>
         </div>
-        <div className="row">
+        <div className="row mt-3">
           <div className="col">
             <div className="clearfix">
               <div className="float-left">
-                <WeatherIcon code={props.details.icon} />
-              </div>
-
-              <div className="float-left">
+                <WeatherIcon code={props.details.icon} size={50}/>
+                </div>
                 <WeatherTemperature celsius={props.details.temperature} />
-              </div>
             </div>
           </div>
 
